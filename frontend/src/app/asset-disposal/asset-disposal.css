@@ -1,0 +1,323 @@
+.disposal-page {
+  --dp-border: #e5e7eb;
+  --dp-muted: #64748b;
+}
+
+.disposal-hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.disposal-hero h1 {
+  margin: 5px 0;
+}
+
+.disposal-hero p {
+  margin: 0;
+  color: var(--dp-muted);
+}
+
+.disposal-message {
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.disposal-message.error {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.disposal-message.success {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.disposal-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.disposal-stats article {
+  padding: 17px;
+  border: 1px solid var(--dp-border);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.disposal-stats span {
+  display: block;
+  color: var(--dp-muted);
+  font-size: 12px;
+}
+
+.disposal-stats strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 24px;
+}
+
+.disposal-editor-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.disposal-editor-head button,
+.disposal-modal header button {
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+}
+
+.disposal-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.disposal-form-grid label {
+  display: grid;
+  gap: 7px;
+  font-weight: 700;
+}
+
+.disposal-form-grid input,
+.disposal-form-grid select,
+.disposal-form-grid textarea,
+.disposal-toolbar input,
+.disposal-toolbar select {
+  padding: 0 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.disposal-form-grid input,
+.disposal-form-grid select {
+  height: 42px;
+}
+
+.disposal-form-grid textarea {
+  padding: 10px;
+}
+
+.disposal-form-grid .wide {
+  grid-column: 1/-1;
+}
+
+.disposal-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 20px;
+  border-bottom: 1px solid var(--dp-border);
+}
+
+.disposal-toolbar h2 {
+  margin: 0 0 3px;
+}
+
+.disposal-toolbar p {
+  margin: 0;
+  color: var(--dp-muted);
+  font-size: 12px;
+}
+
+.disposal-toolbar > div:last-child {
+  display: flex;
+  gap: 9px;
+}
+
+.disposal-toolbar input {
+  width: 340px;
+  height: 42px;
+}
+
+.disposal-toolbar select {
+  width: 170px;
+  height: 42px;
+}
+
+.disposal-badge {
+  display: inline-flex;
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.disposal-badge.requested {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.disposal-badge.approved {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.disposal-badge.disposed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.disposal-badge.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.disposal-inactive {
+  opacity: 0.62;
+}
+
+.disposal-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+}
+
+.disposal-pagination p {
+  margin: 0;
+  color: var(--dp-muted);
+  font-size: 12px;
+}
+
+.disposal-pagination > div {
+  display: flex;
+  gap: 6px;
+}
+
+.disposal-page-number {
+  min-width: 38px;
+  height: 40px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.disposal-page-number.active {
+  background: #112e6a;
+  color: #fff;
+}
+
+.disposal-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.disposal-modal {
+  width: min(760px, 100%);
+  padding: 22px;
+  border-radius: 17px;
+  background: #fff;
+}
+
+.disposal-modal header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.disposal-modal header p {
+  color: var(--dp-muted);
+}
+
+.disposal-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.disposal-detail-grid > div {
+  padding: 13px;
+  border: 1px solid var(--dp-border);
+  border-radius: 10px;
+}
+
+.disposal-detail-grid .wide {
+  grid-column: 1/-1;
+}
+
+.disposal-detail-grid span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--dp-muted);
+  font-size: 11px;
+}
+
+.disposal-modal footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.disposal-denied {
+  max-width: 560px;
+  margin: 50px auto;
+  padding: 28px;
+  text-align: center;
+  border: 1px solid var(--dp-border);
+  border-radius: 15px;
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .disposal-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .disposal-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .disposal-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .disposal-toolbar input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .disposal-hero {
+    flex-direction: column;
+  }
+
+  .disposal-stats,
+  .disposal-form-grid,
+  .disposal-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .disposal-form-grid .wide,
+  .disposal-detail-grid .wide {
+    grid-column: auto;
+  }
+
+  .disposal-toolbar > div:last-child {
+    flex-direction: column;
+  }
+
+  .disposal-toolbar select {
+    width: 100%;
+  }
+
+  .disposal-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

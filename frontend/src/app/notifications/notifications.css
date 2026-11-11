@@ -1,0 +1,169 @@
+.personal-notices {
+  --b: #e5e7eb;
+  --m: #64748b;
+}
+
+.notice-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.notice-head h1 {
+  margin: 5px 0;
+}
+
+.notice-head p {
+  margin: 0;
+  color: var(--m);
+}
+
+.notice-head > div:last-child {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.notice-error {
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.notice-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.notice-tabs button {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  padding: 9px 13px;
+  border: 1px solid var(--b);
+  border-radius: 10px;
+  background: #fff;
+  font-weight: 700;
+}
+
+.notice-tabs button.active {
+  border-color: #93c5fd;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.notice-tabs span {
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  font-size: 11px;
+}
+
+.notice-list {
+  overflow: hidden;
+  border: 1px solid var(--b);
+  border-radius: 15px;
+  background: #fff;
+}
+
+.notice {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  padding: 17px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.notice:last-child {
+  border-bottom: 0;
+}
+
+.notice.unread {
+  border-left: 4px solid #2563eb;
+  background: #f8fbff;
+}
+
+.notice-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: 900;
+}
+
+.notice-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notice-title h3 {
+  margin: 0;
+}
+
+.notice-title span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+.notice p {
+  margin: 7px 0;
+  color: #475569;
+}
+
+.notice small {
+  color: #94a3b8;
+}
+
+.notice button {
+  padding: 8px 10px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.read-label {
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.notice-empty {
+  min-height: 260px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: #64748b;
+}
+
+.notice-empty p {
+  margin: 6px 0;
+}
+
+@media (max-width: 700px) {
+  .notice-head {
+    flex-direction: column;
+  }
+
+  .notice {
+    grid-template-columns: auto 1fr;
+  }
+
+  .notice > div:last-child {
+    grid-column: 2;
+  }
+}

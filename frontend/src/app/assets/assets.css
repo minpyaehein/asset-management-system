@@ -1,0 +1,398 @@
+.assets-page {
+    --asset-border: #e5e7eb;
+    --asset-muted: #64748b
+}
+
+.assets-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px
+}
+
+.assets-hero h1 {
+    margin: 5px 0 7px
+}
+
+.assets-hero p {
+    margin: 0;
+    color: var(--asset-muted)
+}
+
+.asset-message {
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border-radius: 10px
+}
+
+.asset-error {
+    border: 1px solid #fecaca;
+    background: #fef2f2;
+    color: #991b1b
+}
+
+.asset-success {
+    border: 1px solid #bbf7d0;
+    background: #f0fdf4;
+    color: #166534
+}
+
+.asset-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 20px
+}
+
+.asset-stats article {
+    padding: 17px;
+    border: 1px solid var(--asset-border);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, .04)
+}
+
+.asset-stats span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--asset-muted);
+    font-size: 12px
+}
+
+.asset-stats strong {
+    font-size: 25px
+}
+
+.asset-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px
+}
+
+.asset-close {
+    border: 0;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer
+}
+
+.asset-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px
+}
+
+.asset-field {
+    display: grid;
+    gap: 7px
+}
+
+.asset-field label {
+    color: #374151;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.asset-field input,
+.asset-field select,
+.asset-field textarea,
+.asset-filter-tools input,
+.asset-filter-tools select {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: #fff;
+    color: #111827
+}
+
+.asset-field input,
+.asset-field select {
+    min-height: 42px;
+    padding: 0 11px
+}
+
+.asset-field textarea {
+    padding: 10px 11px;
+    resize: vertical
+}
+
+.asset-notes-field {
+    grid-column: span 2
+}
+
+.asset-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 17px 20px;
+    border-bottom: 1px solid var(--asset-border)
+}
+
+.asset-toolbar h2 {
+    margin: 0 0 3px
+}
+
+.asset-toolbar p {
+    margin: 0;
+    color: var(--asset-muted);
+    font-size: 12px
+}
+
+.asset-filter-tools {
+    display: flex;
+    gap: 9px
+}
+
+.asset-filter-tools input {
+    width: min(360px, 42vw);
+    height: 40px;
+    padding: 0 11px
+}
+
+.asset-filter-tools select {
+    width: 160px;
+    height: 40px;
+    padding: 0 9px
+}
+
+.asset-serial-copy {
+    display: block;
+    margin-top: 4px;
+    color: #94a3b8;
+    font-size: 11px
+}
+
+.asset-status {
+    display: inline-flex;
+    padding: 5px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800
+}
+
+.asset-status.active {
+    background: #dbeafe;
+    color: #1d4ed8
+}
+
+.asset-status.available {
+    background: #dcfce7;
+    color: #166534
+}
+
+.asset-status.assigned {
+    background: #e0e7ff;
+    color: #3730a3
+}
+
+.asset-status.maintenance {
+    background: #fef3c7;
+    color: #92400e
+}
+
+.asset-status.inactive {
+    background: #fee2e2;
+    color: #991b1b
+}
+
+.asset-status.retired {
+    background: #e2e8f0;
+    color: #475569
+}
+
+.asset-inactive-row {
+    opacity: .65
+}
+
+.mini-btn.view {
+    color: #1d4ed8
+}
+
+.mini-btn.deactivate {
+    color: #b91c1c
+}
+
+.mini-btn.activate {
+    color: #15803d
+}
+
+.asset-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px
+}
+
+.asset-pagination p {
+    margin: 0;
+    color: var(--asset-muted);
+    font-size: 12px
+}
+
+.asset-pagination>div {
+    display: flex;
+    gap: 6px
+}
+
+.asset-page {
+    min-width: 38px;
+    height: 40px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: #fff;
+    cursor: pointer
+}
+
+.asset-page.active {
+    border-color: #112e6a;
+    background: #112e6a;
+    color: #fff
+}
+
+.asset-detail-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, .65);
+    backdrop-filter: blur(2px)
+}
+
+.asset-detail-dialog {
+    width: min(920px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    padding: 22px;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 26px 80px rgba(0, 0, 0, .3)
+}
+
+.asset-detail-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.asset-detail-header h2 {
+    margin: 5px 0
+}
+
+.asset-detail-header p {
+    margin: 0;
+    color: var(--asset-muted)
+}
+
+.asset-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 18px 0
+}
+
+.asset-detail-grid>div {
+    padding: 13px;
+    border: 1px solid var(--asset-border);
+    border-radius: 10px
+}
+
+.asset-detail-grid span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--asset-muted);
+    font-size: 11px;
+    text-transform: uppercase
+}
+
+.asset-detail-notes {
+    grid-column: 1/-1
+}
+
+.asset-detail-notes strong {
+    display: block;
+    white-space: pre-wrap;
+    line-height: 1.5
+}
+
+.asset-detail-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px
+}
+
+.asset-permission-denied {
+    max-width: 560px;
+    margin: 50px auto;
+    padding: 28px;
+    text-align: center;
+    border: 1px solid var(--asset-border);
+    border-radius: 15px;
+    background: #fff
+}
+
+.btn:disabled,
+.mini-btn:disabled,
+.asset-page:disabled {
+    cursor: not-allowed;
+    opacity: .5
+}
+
+@media(max-width:1000px) {
+    .asset-stats {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .asset-form-grid,
+    .asset-detail-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(max-width:720px) {
+
+    .assets-hero,
+    .asset-toolbar {
+        align-items: stretch;
+        flex-direction: column
+    }
+
+    .asset-stats,
+    .asset-form-grid,
+    .asset-detail-grid {
+        grid-template-columns: 1fr
+    }
+
+    .asset-notes-field {
+        grid-column: auto
+    }
+
+    .asset-filter-tools {
+        flex-direction: column
+    }
+
+    .asset-filter-tools input,
+    .asset-filter-tools select {
+        width: 100%
+    }
+
+    .asset-pagination {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .asset-pagination>div {
+        max-width: 100%;
+        overflow: auto
+    }
+
+    .asset-detail-dialog {
+        padding: 16px
+    }
+}

@@ -1,0 +1,1 @@
+import type { Metadata } from "next";import UserDashboard from "@/components/user-dashboard";export const metadata:Metadata={title:"Agent Dashboard | Asset Management"};export default function Page(){return <UserDashboard/>}
