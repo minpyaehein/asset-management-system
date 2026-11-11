@@ -1,0 +1,65 @@
+﻿# Dependencies
+node_modules/
+**/node_modules/
+
+# Build files
+.next/
+**/.next/
+dist/
+**/dist/
+build/
+**/build/
+coverage/
+**/coverage/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Database backups
+*.backup
+*.dump
+*.bak
+
+# Keep application SQL files
+!backend/src/**/*.sql
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Editors
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test output
+playwright-report/
+test-results/
+
+# Private keys and certificates
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Temporary files
+tmp/
+temp/
+*.tmp
